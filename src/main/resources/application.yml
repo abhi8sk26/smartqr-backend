@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smartqr
+    username: postgres
+    password: abhi8sk26
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+jwt:
+  secret: mySuperSecretKeyForJWTGenerationThatIsAtLeast32BytesLong!!!
+  expiration: 86400000
+
+app:
+  base-url: http://192.168.0.164:8080
+
+server:
+  port: 8080
