@@ -1,13 +1,10 @@
 services:
   - type: web
     name: smartqr-backend
-    env: java
-    buildCommand: ./mvnw clean package
-    startCommand: java -jar target/SmartQr-0.0.1-SNAPSHOT.jar
+    env: docker
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: JWT_SECRET
         generateValue: true
       - key: SPRING_PROFILES_ACTIVE
         value: production
-      - key: RENDER_URL
-        value: https://smartqr-backend.onrender.com
